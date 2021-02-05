@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Editor de Spyder
 
-Este es un archivo temporal.
-"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 import os
@@ -35,8 +32,6 @@ for i in my_files:
 def C_in_alpha(T): #Mole fraction of C in alpha using thermocalc under para equilibrium
     C= 1.4734491E-20*T**6 + 3.9638142E-17*T**5 - 1.1293268E-13*T**4 + 6.8406210E-11*T**3 - 9.3489472E-09*T**2 + 6.1810195E-07*T - 6.3920771E-06
     return abs(C)
-# print(np.poly1d(P1)) #Polynomial for the mole fraction of C in alpha susing TC under paraequilibrium for simplified P91 steel (C,Fe,Cr content)
-# print(np.poly1d(P2)) #Polinomial #Polynomial for the mole fraction of C in alpha susing TC under paraequilibrium for simplified X80 steel (C,Fe,Mn content)
 
 MF_to_WP=np.array([4.88194823e-05,2.14076779e+01,1.69714954e+01,1.16633462e+01,1.70719962e+01])
 def mf_to_wp(MF):
@@ -45,11 +40,7 @@ def mf_to_wp(MF):
 C=C_in_alpha(temp)
 # Cwp=mf_to_wp(C)
 
-# # plt.plot(Temperature1,C_in_alpa_TC1,'bo')
-# # plt.plot(temp,C_in_alpha_fit1,'b')
 plt.plot(temp,C,'y', label='fit from master fitter')
-# plt.plot(Temperature2,C_in_alpa_TC2,'ro')
-# plt.plot(temp,C_in_alpha_fit2,'r')
 plt.legend()
 
 
